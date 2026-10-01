@@ -1,83 +1,136 @@
-﻿/**
+/**
  * productService.js
- * Servico de gerenciamento de produtos em memoria.
+ * Servico de gerenciamento de produtos da Loja Oficial da Tracen Academy.
  * Campos: id, name, description, price, quantity, category, createdAt, updatedAt
+ *
+ *   Uma musume Pretty Derby — Loja da Tracen Academy
+ *   "Correr e uma arte, e cada produto conta uma historia!"
  */
 
 let products = [
     {
         id: 1,
-        name: "Notebook Gamer",
-        description: "Notebook para jogos e edicao com placa dedicada",
-        price: 4500,
-        quantity: 8,
-        category: "Eletronicos",
-        createdAt: new Date("2025-01-10").toISOString(),
-        updatedAt: new Date("2025-01-10").toISOString()
+        name: "Figura Special Week — Season 1",
+        description: "Figura de 20cm da protagonista Special Week com pose de vitoria. Edicao limitada da 1a temporada.",
+        price: 289.90,
+        quantity: 12,
+        category: "Figuras",
+        createdAt: new Date("2023-04-01").toISOString(),
+        updatedAt: new Date("2023-04-01").toISOString()
     },
     {
         id: 2,
-        name: "Mouse Sem Fio",
-        description: "Mouse ergonomico com autonomia de 12 meses",
-        price: 120,
-        quantity: 40,
-        category: "Perifericos",
-        createdAt: new Date("2025-01-12").toISOString(),
-        updatedAt: new Date("2025-01-12").toISOString()
+        name: "Plushie Silence Suzuka",
+        description: "Plushie fofinhos da Silence Suzuka com seu uniforme de corrida. Altura: 25cm. Material: pelucia premium.",
+        price: 149.90,
+        quantity: 30,
+        category: "Pelucias",
+        createdAt: new Date("2023-04-15").toISOString(),
+        updatedAt: new Date("2023-04-15").toISOString()
     },
     {
         id: 3,
-        name: "Teclado Mecanico",
-        description: "Teclado mecanico com switches blue e iluminacao RGB",
-        price: 350,
-        quantity: 15,
-        category: "Perifericos",
-        createdAt: new Date("2025-02-05").toISOString(),
-        updatedAt: new Date("2025-02-05").toISOString()
+        name: "Boneca Tokai Teio — Edição Campeã",
+        description: "Boneca articulada 30cm da Tokai Teio com tiara e capa de campeã do Japan Cup. Acompanha suporte.",
+        price: 319.90,
+        quantity: 8,
+        category: "Figuras",
+        createdAt: new Date("2023-05-01").toISOString(),
+        updatedAt: new Date("2023-05-01").toISOString()
     },
     {
         id: 4,
-        name: "Monitor 4K",
-        description: "Monitor 27 polegadas com resolucao 4K e taxa de 144Hz",
-        price: 2800,
-        quantity: 5,
-        category: "Eletronicos",
-        createdAt: new Date("2025-03-01").toISOString(),
-        updatedAt: new Date("2025-03-01").toISOString()
+        name: "Boné de Corrida Gold Ship",
+        description: "Boné oficial inspirado no estilo rebelde e energetico da Gold Ship. Ajuste snapback. Tamanho unico.",
+        price: 89.90,
+        quantity: 50,
+        category: "Vestuario",
+        createdAt: new Date("2023-05-10").toISOString(),
+        updatedAt: new Date("2023-05-10").toISOString()
     },
     {
         id: 5,
-        name: "Headset Bluetooth",
-        description: "Headset com cancelamento de ruido ativo",
-        price: 650,
-        quantity: 20,
-        category: "Audio",
-        createdAt: new Date("2025-03-15").toISOString(),
-        updatedAt: new Date("2025-03-15").toISOString()
+        name: "CD Soundtrack — Umamusume Pretty Derby OST Vol.1",
+        description: "Soundtrack oficial com 22 faixas, incluindo 'Make Debut!', 'Grow Up Shine!' e temas exclusivos das corridas.",
+        price: 129.90,
+        quantity: 25,
+        category: "Musica",
+        createdAt: new Date("2023-06-01").toISOString(),
+        updatedAt: new Date("2023-06-01").toISOString()
     },
     {
         id: 6,
-        name: "Webcam Full HD",
-        description: "Webcam 1080p com microfone integrado",
-        price: 280,
-        quantity: 30,
-        category: "Perifericos",
-        createdAt: new Date("2025-04-02").toISOString(),
-        updatedAt: new Date("2025-04-02").toISOString()
+        name: "Camiseta Mejiro McQueen — Team Spica",
+        description: "Camiseta 100% algodao com estampa artistica da Mejiro McQueen. Disponivel nos tamanhos P ao GG.",
+        price: 79.90,
+        quantity: 60,
+        category: "Vestuario",
+        createdAt: new Date("2023-06-15").toISOString(),
+        updatedAt: new Date("2023-06-15").toISOString()
     },
     {
         id: 7,
-        name: "SSD 1TB",
-        description: "SSD NVMe com leitura de 3500 MB/s",
-        price: 420,
-        quantity: 50,
-        category: "Armazenamento",
-        createdAt: new Date("2025-04-10").toISOString(),
-        updatedAt: new Date("2025-04-10").toISOString()
+        name: "Chaveiro Acrílico — Daiwa Scarlet",
+        description: "Chaveiro de acrilico dupla face com arte oficial da Daiwa Scarlet em pose de desafio. Mede 6cm.",
+        price: 29.90,
+        quantity: 100,
+        category: "Acessorios",
+        createdAt: new Date("2023-07-01").toISOString(),
+        updatedAt: new Date("2023-07-01").toISOString()
+    },
+    {
+        id: 8,
+        name: "Set de Pins — Time Spica Completo",
+        description: "Conjunto com 7 pins esmaltados dos membros do Time Spica: Special Week, Silence Suzuka, Tokai Teio, Gold Ship, Mejiro McQueen, Vodka e Daiwa Scarlet.",
+        price: 119.90,
+        quantity: 40,
+        category: "Acessorios",
+        createdAt: new Date("2023-07-15").toISOString(),
+        updatedAt: new Date("2023-07-15").toISOString()
+    },
+    {
+        id: 9,
+        name: "Caneca Tracen Academy",
+        description: "Caneca de ceramica 350ml com o brasao oficial da Tracen Academy e a frase 'Win the Triple Crown!'. Vai ao microondas.",
+        price: 64.90,
+        quantity: 45,
+        category: "Utilidades",
+        createdAt: new Date("2023-08-01").toISOString(),
+        updatedAt: new Date("2023-08-01").toISOString()
+    },
+    {
+        id: 10,
+        name: "Artbook — Umamusume Season 2",
+        description: "Artbook oficial de 192 paginas com ilustracoes da 2a temporada, comentarios dos artistas e arte conceitual inedita.",
+        price: 199.90,
+        quantity: 15,
+        category: "Livros",
+        createdAt: new Date("2023-08-20").toISOString(),
+        updatedAt: new Date("2023-08-20").toISOString()
+    },
+    {
+        id: 11,
+        name: "Figura El Condor Pasa — Pose de Largada",
+        description: "Figura de resina 18cm da El Condor Pasa capturando o momento da largada com detalhes de pintura premium.",
+        price: 349.90,
+        quantity: 6,
+        category: "Figuras",
+        createdAt: new Date("2023-09-01").toISOString(),
+        updatedAt: new Date("2023-09-01").toISOString()
+    },
+    {
+        id: 12,
+        name: "Mousepad Vodka & Daiwa Scarlet — Rival Eternas",
+        description: "Mousepad XXL (80x40cm) com ilustracao das rivais Vodka e Daiwa Scarlet lado a lado. Base antiderrapante.",
+        price: 94.90,
+        quantity: 35,
+        category: "Utilidades",
+        createdAt: new Date("2023-09-15").toISOString(),
+        updatedAt: new Date("2023-09-15").toISOString()
     }
 ];
 
-let nextId = 8;
+let nextId = 13;
 
 // ─── READ ──────────────────────────────────────────────────────────────────
 

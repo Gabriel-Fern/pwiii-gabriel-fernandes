@@ -1,13 +1,12 @@
-﻿/**
- * Middleware de logging de requisicoes HTTP.
- * Loga metodo, rota, status e tempo de resposta.
- */
+﻿
 function logger(req, res, next) {
+    // Marca o tempo do início da requisição
     const start = Date.now();
-    const timestamp = new Date().toISOString();
-
+    const timestamp = new Date().toISOString(); 
+    //Evento Finish só vai ser disparado quando a resposta for enviada
     res.on("finish", () => {
         const duration = Date.now() - start;
+        // Exibe o log
         console.log(`[${timestamp}] ${req.method} ${req.originalUrl} — ${res.statusCode} (${duration}ms)`);
     });
 

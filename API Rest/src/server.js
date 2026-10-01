@@ -1,4 +1,4 @@
-﻿const express = require("express");
+const express = require("express");
 const productRoutes = require("./routes/productRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
 const logger = require("./middlewares/logger");
@@ -13,12 +13,14 @@ app.use(logger);
 // Rota raiz
 app.get("/", (req, res) => {
     res.status(200).json({
-        message: "API de Produtos — PWIII Gabriel Fernandes",
+        message: "🐴 Bem-vindo a Loja Oficial da Tracen Academy! — Umamusume: Pretty Derby",
+        tagline: "Correr e uma arte, e cada produto conta uma historia!",
         version: "2.0.0",
         endpoints: {
             products: "/product",
             categories: "/category"
-        }
+        },
+        dica: "Use GET /product?search=Special+Week para buscar sua Uma Musume favorita!"
     });
 });
 
